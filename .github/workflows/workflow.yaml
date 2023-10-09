@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: testworkflow
+name: Testworkflow
 on: 
   push:
     branches:
@@ -18,4 +18,4 @@ jobs:
     needs: check-disk-usuage
     steps:
       - name: echo a string 
-      - run: write-output "macos  string" 
+      - run: write-output "macos string" 
