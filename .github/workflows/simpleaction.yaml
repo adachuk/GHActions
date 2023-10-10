@@ -1,8 +1,6 @@
 
 name: RepoEvents
-on: 
-    pull_request:
-        types: [opened,closed]
+on: [push,pull_request]
 
 jobs:
     checkout-test:
