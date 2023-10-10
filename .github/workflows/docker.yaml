@@ -16,6 +16,6 @@ jobs:
             - name: Container in a step 
               uses: docker://node:18.16-alpine3.17
               with:
-                entrypoint: /isr/local/bin/node
+                entrypoint: /usr/local/bin/node
                 #args are used in placed of a command in docker
                 args: -p 2+3
