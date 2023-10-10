@@ -23,4 +23,4 @@ jobs:
     needs: check-disk-usuage
     steps:
       - name: echo a string 
-        run: Write-output "Windows String"
+        run: Write-output "Windows String."
