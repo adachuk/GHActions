@@ -1,5 +1,5 @@
-name: docker
-on: [push]
+name: Build and publish 
+on: [push, workflow_dispatch]
 
 jobs:
     docker-job: 
