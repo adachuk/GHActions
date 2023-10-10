@@ -13,5 +13,9 @@ jobs:
               run: 
                 node -v
                 cat /etc/os-release
-            - name: Log Env
-              run: echo $API_URL
+            - name: Container in a step 
+              uses: docker://node:18.16-alpine3.17
+              with:
+                entrypoint: /isr/local/bin/node
+                #args are used in placed of a command in docker
+                args: -p 2+3
