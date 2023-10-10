@@ -1,0 +1,26 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Testworkflow
+on: 
+  push:
+    branches:
+      - lucygit
+jobs:
+  check-disk-usuage:
+    runs-on: macos-latest
+
+    steps:
+      - name: check disk usage
+        run: df -h
+
+  parallel_job:
+    runs-on: macos-latest
+    steps:
+      - name: view SW version
+        run: sw_vers
+  dependant-job:
+    runs-on: windows-latest
+    needs: check-disk-usuage
+    steps:
+      - name: echo a string 
+        run: Write-output "Windows String"
