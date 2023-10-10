@@ -1,0 +1,10 @@
+name: workflow Stack
+on:
+  workflow_run:
+    workflows: [RepoEvents]
+    types: [completed]
+jobs:
+  echo-string:
+    runs-on: macos-latest
+    setps: 
+      - run: echo" i was triggered because repo event ran and completed"
