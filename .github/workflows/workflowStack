@@ -7,4 +7,4 @@ jobs:
   echo-string:
     runs-on: macos-latest
     setps: 
-      - run: echo" i was triggered because repo event ran and completed."
+      - run: echo" ${({ i was triggered because repo event ran and completed."
